@@ -1,8 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.5'
-source 'http://rubygems.org'
-
+gem 'sqlite3-ruby', :require => 'sqlite3'
 group :development do
   gem 'rspec-rails', '2.5.0'
 end
@@ -10,6 +9,10 @@ end
 group :test do
   gem 'rspec', '2.5.0'
   gem 'webrat', '0.7.1'
+  gem 'spork', '0.9.0.rc4'
+  
+  #not sure about this but I am sticking it in to avoid ANSI 1.31 
+  gem 'win32console', :platforms => [:mswin, :mingw]
 end
 
 # Bundle edge Rails instead:
@@ -30,7 +33,7 @@ end
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri'
-gem 'sqlite3-ruby', :require => 'sqlite3'
+
 # gem 'aws-s3', :require => 'aws/s3'
 
 # Bundle gems for the local environment. Make sure to

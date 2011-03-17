@@ -3,6 +3,9 @@ SampleApp::Application.routes.draw do
 
   get "pahes/contact"
 
+  get "pahes/about"
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
